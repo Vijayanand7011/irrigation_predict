@@ -1,0 +1,132 @@
+{% extends 'base-template.html' %}
+
+{% block head %} 
+
+    <title>Pressure Compensation Drip Irrigation</title>
+    <link rel="stylesheet" href={{url_for("static",filename="video-frame.css")}}>
+    <link rel="stylesheet" href={{url_for("static",filename="tutorial-info.css")}}>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    
+{% endblock %}
+
+
+
+{% block contentblock %} 
+
+    <div class="video-block">
+        <div class="video-grid">
+
+            <div class="video-container">
+    
+                <video id="video" class="video" width="100%" height="100%">
+                  <source src="{{ url_for('static', filename='videos/pressure_compensation_drip_irrigation.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                
+                <div class="controls">
+                    <i id="playPause" class="control-icon fas fa-play"></i>
+                    <input id="timeline" class="timeline" type="range" value="0" max="100" step="0.1">
+                    <i id="fullscreen" class="control-icon fas fa-expand"></i>
+                </div>
+    
+              </div>
+              
+              <script src="{{ url_for('static', filename='video-frame.js') }}"></script>
+    
+        </div>
+    
+        <div class="tutorial-info">
+
+            <h2>Pressure Compensating Drip Irrigation: The Key to Efficient and Uniform Watering</h2>
+       
+            <div class="section">
+                <p><strong>Ensure Consistent Water Distribution for Every Plant</strong></p>
+
+                <p>In the world of irrigation, one of the biggest challenges is maintaining consistent water flow across a system. Whether you're managing a farm, garden, or landscape, fluctuations in water pressure can lead to uneven watering — with some plants getting too much water and others not enough. That’s where <strong>Pressure Compensating Drip Irrigation</strong> (PCDI) comes in. </p>
+
+                <p>Our <strong>Pressure Compensating Drip Irrigation Systems</strong> provide the solution by delivering a constant flow of water, no matter the pressure variations in your system. From flat fields to sloped landscapes, PCDI ensures that each plant gets exactly the right amount of water, leading to healthier growth, better crop yields, and significant water savings.</p>
+
+            </div>
+    
+            <div class="section">
+                <h3>What is Pressure Compensating Drip Irrigation?</h3>
+
+                <p>Pressure compensating drip irrigation utilizes specialized emitters designed to regulate water flow and maintain consistency, regardless of fluctuations in water pressure. By using internal mechanisms (like diaphragms or valves), these emitters adjust to ensure that every drop counts, even when pressure changes along the line.</p>
+
+            </div>
+    
+            <div class="section">
+                <h3>How Does It Work?</h3>
+
+                <p>Traditional drip irrigation systems can face issues when water pressure varies due to factors like:</p>
+                <ul class="factor-list">
+                <li><strong>Elevation Changes</strong>: Areas of the field higher up can experience lower pressure.</li>
+                <li><strong>Long Pipelines</strong>: Friction in long hoses or tubes can reduce pressure at the end of the line.</li>
+                <li><strong>System Blockages</strong>: Partial blockages or flow restrictions can cause inconsistent pressure.</li>
+                </ul>
+
+                <p><strong>Pressure Compensating Emitters</strong> solve these problems by adjusting automatically to maintain a consistent flow rate. For example, if one part of your system has high pressure, the emitter will reduce the flow to maintain uniform watering. Likewise, if the pressure drops, it will increase the flow. This ensures that each plant gets the perfect amount of water — every time.</p>
+
+            
+            </div>
+    
+            <div class="section">
+                <h3>Key Benefits of Pressure Compensating Drip Irrigation</h3>
+
+                <ul class="factor-list">
+                <li><strong>Uniform Water Distribution</strong>: Each emitter delivers the same amount of water, regardless of pressure fluctuations.</li>
+                <li><strong>Water Conservation</strong>: Minimize waste with accurate water delivery, reducing the need for frequent adjustments.</li>
+                <li><strong>Improved Plant Health</strong>: Consistent irrigation leads to healthier plants with fewer issues like overwatering or underwatering.</li>
+                <li><strong>Reduced Maintenance</strong>: Fewer clogged emitters and system failures due to uneven pressure.</li>
+                <li><strong>Cost-Effective in the Long Run</strong>: Although the initial investment may be higher, the efficiency, water savings, and reduced maintenance costs lead to greater long-term savings.</li>
+                </ul>
+
+            </div>
+    
+            <div class="section">
+                <h3>Types of Pressure Compensating Emitters</h3>
+
+                <ul class="factor-list">
+                <li><strong>Inline Emitters</strong>: These are built directly into the tubing and spaced out evenly along the drip line. Perfect for large agricultural fields or landscapes.</li>
+                <li><strong>Online Emitters</strong>: These are placed at specific points on separate tubing, ideal for focused irrigation needs.</li>
+                </ul>
+
+            </div>
+    
+            <div class="section">
+                <h3>Why Choose Pressure Compensating Drip Irrigation?</h3>
+
+                <ul class="factor-list">
+                <li><strong>Perfect for Sloped and Uneven Terrain</strong>: Whether your landscape has rolling hills or you're working with multi-level farming, pressure compensating systems ensure your plants receive the same care.</li>
+                <li><strong>Ideal for Large-Scale Irrigation</strong>: From commercial farms to orchards, pressure compensating emitters provide uniform irrigation across vast areas, making them essential for efficient water use.</li>
+                <li><strong>Saves Water and Resources</strong>: Deliver water where it’s needed, reducing waste and maximizing efficiency.</li>
+                <li><strong>Flexibility in Design</strong>: Whether you're managing a small garden or a large field, pressure compensating systems can be customized to suit your specific irrigation needs.</li>
+                </ul>
+
+            </div>
+
+            <div class="section"> 
+                <h3>Applications of Pressure Compensating Drip Irrigation</h3>
+
+                <ul class="factor-list">
+                <li><strong>Agricultural Fields</strong>: Ensures that crops receive an even distribution of water, promoting healthy growth and better yields.</li>
+                <li><strong>Landscaping</strong>: Perfect for gardens, lawns, and greenhouses, where consistent irrigation is crucial for plant health.</li>
+                <li><strong>Sloped Terrain</strong>: When working on hillsides or uneven ground, pressure compensating systems prevent the loss of water from gravity and uneven pressure.</li>
+                <li><strong>Greenhouses</strong>: Delivers reliable watering, ensuring optimal plant health in controlled environments.</li>
+                </ul>
+
+            </div>
+
+            <div class="section">
+                <h3>Invest in Efficiency with Pressure Compensating Drip Irrigation</h3>
+
+                <p>Whether you're growing a garden or running a large farm, our <strong>Pressure Compensating Drip Irrigation</strong> systems are designed to save water, reduce maintenance, and ensure that your plants thrive. With easy installation, durability, and reliable performance, our systems help you get the most out of your irrigation setup. </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

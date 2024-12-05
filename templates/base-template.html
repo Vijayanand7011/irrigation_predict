@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for("static",filename="background-image.css")}}>
+        <link rel="stylesheet" href={{url_for("static",filename="navigation-bar.css")}}>
+        <link rel="stylesheet" href={{url_for("static",filename="form.css")}}>
+
+        {% block head %} {% endblock %}
+
+    </head>
+
+
+    <body>
+        
+        <div class="background-image"></div>
+
+        <div class="navigation-bar" >
+
+        <div class="page-logo">
+            <img src="{{ url_for('static', filename='images/waterways-logo.png', _external=True) }}" alt="Waterways-logo">
+            <div class="team-name">Waterway</div>
+        </div>
+
+        <div class="info">
+            Cultivating Tomorrow's Growth
+        </div>
+
+        <div class="menu-section">
+
+            <a href="/">
+                <button class="menu-options">Home</button>
+            </a>
+
+            <a href="/input-pro">
+                <button class="menu-options">Go-Pro</button>
+            </a>
+
+            <a href="/references">
+                <button class="menu-options">References</button>
+            </a>
+            
+        </div>
+        
+    </div>
+
+    <div class="content-block">
+
+        {% block contentblock %} {% endblock %}
+
+    </div>
+
+
+    </body>
+
+
+</html>

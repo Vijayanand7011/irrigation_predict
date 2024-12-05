@@ -1,0 +1,73 @@
+{% extends 'base-template.html' %}
+
+
+{% block head %}
+
+    <title>{{ title }}</title>
+
+    <style>
+        /* Flexbox container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Center content vertically */
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Description styling */
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+            max-width: 600px; /* Optional: Set max-width for better readability */
+        }
+
+        /* List styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block contentblock %} 
+
+    <div class="container">
+        <h2>{{ title }}</h4>
+        <p>{{ description }}</p>
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

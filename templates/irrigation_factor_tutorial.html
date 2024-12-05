@@ -1,0 +1,133 @@
+{% extends 'base-template.html' %}
+
+{% block head %} 
+
+    <title>How much to irrigate.</title>
+    <link rel="stylesheet" href={{url_for("static",filename="video-frame.css")}}>
+    <link rel="stylesheet" href={{url_for("static",filename="tutorial-info.css")}}>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    
+{% endblock %}
+
+
+
+{% block contentblock %} 
+
+    <div class="video-block">
+        <div class="video-grid">
+
+            <div class="video-container">
+    
+                <video id="video" class="video" width="100%" height="100%">
+                  <source src="{{ url_for('static', filename='videos/how_much_to_irrigate.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                
+                <div class="controls">
+                    <i id="playPause" class="control-icon fas fa-play"></i>
+                    <input id="timeline" class="timeline" type="range" value="0" max="100" step="0.1">
+                    <i id="fullscreen" class="control-icon fas fa-expand"></i>
+                </div>
+    
+              </div>
+              
+              <script src="{{ url_for('static', filename='video-frame.js') }}"></script>
+    
+        </div>
+    
+        <div class="tutorial-info">
+            <h2>Crop Irrigation Water Requirements</h2>
+    
+            <div class="section">
+                <h3>1. Evapotranspiration (ETc)</h3>
+                <p>Evapotranspiration for a specific crop (<strong>ETc</strong>) refers to the total amount of water used by the crop, including both evaporation from the soil and transpiration from the plant. This value is critical for estimating water needs for irrigation.</p>
+                <p><strong>Formula:</strong></p>
+                <pre class="formula">ETc = Kc × ETo</pre>
+                <p>Where:</p>
+                <ul class="factor-list">
+                    <li><strong>ETc</strong> = Crop evapotranspiration (mm/day or inches/day)</li>
+                    <li><strong>ETo</strong> = Reference evapotranspiration (mm/day or inches/day)</li>
+                    <li><strong>Kc</strong> = Crop coefficient (dimensionless)</li>
+                </ul>
+                <p>The <strong>crop coefficient</strong> (Kc) varies depending on the crop's growth stage:</p>
+                <ul class="factor-list">
+                    <li><strong>Initial stage:</strong> Kc is lower.</li>
+                    <li><strong>Mid-season:</strong> Kc is higher, as the crop is fully grown.</li>
+                    <li><strong>Late-season:</strong> Kc decreases as the crop matures.</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>2. Reference Evapotranspiration (ETo)</h3>
+                <p>Reference evapotranspiration (<strong>ETo</strong>) represents the water loss from a hypothetical reference crop, usually a well-watered grass. It serves as a baseline for estimating the water requirements of specific crops.</p>
+                <p><strong>Formula (Penman-Monteith Equation):</strong></p>
+                <pre class="formula">ETo = (Δ (Rn - G) + γ (u2 / T) (es - ea)) / (Δ + γ (1 + 0.34 u2))</pre>
+                <p>Where:</p>
+                <ul class="factor-list">
+                    <li><strong>ETo</strong> = Reference evapotranspiration (mm/day)</li>
+                    <li><strong>Δ</strong> = Slope of the saturation vapor pressure curve (kPa/°C)</li>
+                    <li><strong>Rn</strong> = Net radiation at the crop surface (MJ/m²/day)</li>
+                    <li><strong>G</strong> = Soil heat flux density (MJ/m²/day)</li>
+                    <li><strong>γ</strong> = Psychrometric constant (kPa/°C)</li>
+                    <li><strong>T</strong> = Air temperature (°C)</li>
+                    <li><strong>u2</strong> = Wind speed at 2 meters height (m/s)</li>
+                    <li><strong>es</strong> = Saturation vapor pressure (kPa)</li>
+                    <li><strong>ea</strong> = Actual vapor pressure (kPa)</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>3. Crop Coefficient (Kc)</h3>
+                <p>The <strong>crop coefficient</strong> (Kc) is a factor that accounts for the differences in water requirements between the reference crop (ETo) and a specific crop. The value of Kc varies throughout the crop's growth stages:</p>
+                <ul class="factor-list">
+                    <li><strong>Initial growth stage:</strong> Kc is lower.</li>
+                    <li><strong>Mid-season:</strong> Kc increases as the crop matures and has a larger leaf area.</li>
+                    <li><strong>Late season:</strong> Kc decreases as the crop matures and water requirements decrease.</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>4. Soil Water Balance Equation</h3>
+                <p>The soil water balance equation is used to determine the irrigation needs of crops. It accounts for factors such as precipitation, evapotranspiration, runoff, and percolation to estimate when and how much water is needed for irrigation.</p>
+                <p><strong>Formula:</strong></p>
+                <pre class="formula">ΔS = P + I - ETc - D - R</pre>
+                <p>Where:</p>
+                <ul class="factor-list">
+                    <li><strong>ΔS</strong> = Change in soil moisture (mm or inches)</li>
+                    <li><strong>P</strong> = Precipitation (mm or inches)</li>
+                    <li><strong>I</strong> = Irrigation (mm or inches)</li>
+                    <li><strong>ETc</strong> = Crop evapotranspiration (mm or inches)</li>
+                    <li><strong>D</strong> = Deep percolation (mm or inches)</li>
+                    <li><strong>R</strong> = Runoff (mm or inches)</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>5. Irrigation Requirement (IR)</h3>
+                <p>The irrigation requirement (IR) is the amount of water that must be added to meet the crop’s water needs. It is calculated by considering the crop evapotranspiration, effective precipitation, and runoff.</p>
+                <p><strong>Formula:</strong></p>
+                <pre class="formula">IR = ETc - (P + R)</pre>
+                <p>Where:</p>
+                <ul class="factor-list">
+                    <li><strong>IR</strong> = Irrigation requirement (mm or inches)</li>
+                    <li><strong>ETc</strong> = Crop evapotranspiration (mm or inches)</li>
+                    <li><strong>P</strong> = Precipitation (mm or inches)</li>
+                    <li><strong>R</strong> = Runoff (mm or inches)</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>Summary of Key Formulas</h3>
+                <ul class="factor-list">
+                    <li><strong>ETc = ETo × Kc</strong></li>
+                    <li><strong>ETo (Penman-Monteith equation)</strong> = Complex formula involving temperature, radiation, wind speed, etc.</li>
+                    <li><strong>Soil water balance:</strong> ΔS = P + I - ETc - D - R</li>
+                    <li><strong>Irrigation Requirement:</strong> IR = ETc - (P + R)</li>
+                </ul>
+                <p>These equations are essential for estimating crop water requirements and optimizing irrigation schedules to conserve water and ensure healthy crop growth.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

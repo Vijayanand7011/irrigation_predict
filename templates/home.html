@@ -1,0 +1,62 @@
+{% extends 'base-template.html' %}
+
+
+
+{% block head %} 
+    <link rel="stylesheet" href={{url_for("static",filename="home.css")}}>
+
+{% endblock %}
+
+
+
+{% block contentblock %} 
+
+    <div class="home-page-content">
+        <div class="header-quote"> 
+            <h4 class="header-quote">Every drop counts, every crop thrives.</h4>
+        </div>
+    
+        <div class="home-img">
+            <img src="{{ url_for('static', filename='images/home_page_top.jpg', _external=True) }}" alt="image-of-farmer-with-crop">
+        </div>
+    
+        <div class="home-content-container">
+    
+            <p class="home-content">
+                <br> <br>
+                Welcome to our Smart Irrigation Optimization System, 
+                a cutting-edge solution designed to revolutionize the way water is managed in agriculture. 
+                By combining advanced machine learning algorithms with real-time environmental data, 
+                our system provides precise irrigation recommendations tailored to the unique needs of your crops and field conditions. 
+                This approach not only enhances crop productivity but also contributes to sustainable water management, 
+                addressing one of the most pressing challenges in modern agriculture.
+                <br> <br>
+                Our system is built with farmers in mind, 
+                offering user-friendly tools that make it easy to monitor and control water usage. 
+                Whether you are managing a small farm or a large-scale operation, our solution adapts to your needs, 
+                integrating seamlessly with IoT devices like soil moisture sensors and weather stations. 
+                With features like real-time updates, predictive analytics, and actionable insights, 
+                the system empowers you to make informed decisions that maximize efficiency and minimize waste.
+                <br> <br>
+                At the heart of our mission is a commitment to sustainability. 
+                By optimizing water use, our system not only saves costs but also supports global efforts to conserve this precious resource. 
+                Join us in embracing the future of agriculture where technology meets tradition to create a smarter, 
+                more sustainable way of farming.
+            </p>
+    
+        </div>
+
+        <div>
+
+        </div>
+
+        <div class="explore-button">
+            <a href="./input-pin">
+                <button class="explorer">Explore &nbsp; &gt;</button>
+            </a>
+        </div>
+
+    </div>
+    
+
+{% endblock %}

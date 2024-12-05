@@ -1,0 +1,229 @@
+
+{% extends 'base-template.html' %}
+
+
+
+{% block head %} 
+
+    <link rel="stylesheet" href={{url_for("static",filename="references.css")}}>
+
+{% endblock %}
+
+
+
+
+
+{% block contentblock %} 
+
+
+            <div style="
+                display: flex;
+                flex-direction:row;
+                ">
+
+                <div class="card-column">
+
+                    <!-- Card 1 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/wheat.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Wheat.html" class="card-button">
+                                <button class="card-redirect">Wheat</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 2 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/watermelon.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Watermelon.html" class="card-button">
+                                <button class="card-redirect">Watermelon</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 3 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/Sugarcane.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Sugarcane.html" class="card-button">
+                                <button class="card-redirect">Sugarcane</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 4 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/tomato.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Tomato.html" class="card-button">
+                                <button class="card-redirect">Tomato</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 5 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/onion.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Onion.html" class="card-button">
+                                <button class="card-redirect">Onion</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 6 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/maize.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Maize.html" class="card-button">
+                                <button class="card-redirect">Maize</button>
+                            </a>
+                
+                        </div>
+                    </div>
+                
+                    <!-- Card 7 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src=".{{ url_for('static', filename='images/crop/cotton.jpg') }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Cotton.html" class="card-button">
+                                <button class="card-redirect">Cotton</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Card 8 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/potato.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Potato.html" class="card-button">
+                                <button class="card-redirect">Potato</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Card 9 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/groundnut.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Groundnut.html" class="card-button">
+                                <button class="card-redirect">Groundnut</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Card 10 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/pepper.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Pepper.html" class="card-button">
+                                <button class="card-redirect">Pepper</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Card 11 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/banana.jpg') }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Banana.html" class="card-button">
+                                <button class="card-redirect">Banana</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Card 12 -->
+                    <div class="card" style="width: 18rem;">
+                
+                        <img src="{{ url_for('static', filename='images/crop/cabbage.jpg', _external=True) }}" class="card-img-top" alt="Card image cap">
+                
+                        <div class="card-body">
+                
+                            <a href="/references/Cabbage.html" class="card-button">
+                                <button class="card-redirect">Cabbage</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                
+                    <!-- Add more cards if needed -->
+                
+                </div>
+
+                <div class="reference-text-box">
+                    <div>
+                        <p>
+                            link: https://www.fao.org/home/en
+                            This site provided extensive and reliable data on various environmental factors such as temperature, humidity, rainfall, and water requirements for irrigation. This information was essential for accurately modeling the irrigation needs of wheat crops, helping to develop a machine learning algorithm that optimizes irrigation schedules based on real-time environmental conditions and farmer inputs. The data supported the creation of a more efficient and sustainable irrigation system for crop growth.
+                            link: https://www.plantscience4u.com/
+                            This site provided critical data on soil types, infiltration rates, and drainage conditions, contributing to the development of the irrigation model by enabling accurate soil-specific water scheduling and field capacity considerations.
+                            link: https://www.cgwb.gov.in/old_website/District_Profile/
+                            This site offered detailed insights into regional soil profiles, field capacities, and infiltration rates, which were integral for incorporating soil-based variability into the irrigation scheduling model, ensuring precise and optimized water usage.
+                            book: Allen, R. G., Pereira, L. S., Raes, D., & Smith, M. (1998). Crop evapotranspiration: Guidelines for computing crop water requirements. FAO Irrigation and Drainage Paper No. 56. FAO, Rome.
+                            This book serves as a foundational resource for understanding the principles of crop evapotranspiration and its role in determining water requirements for irrigation. It provides detailed methodologies for calculating crop water needs, which are critical for developing precise irrigation schedules. The guidelines have been widely used in agricultural water management to enhance water use efficiency and optimize irrigation practices.
+                            book: Eckhardt, K., & Ulrich, D. (2020). "Impact of climate change on crop water demand and irrigation scheduling." Agricultural Water Management, 224, 105735.
+                            This publication examines the effects of climate change on crop water demand, highlighting the increasing challenges in irrigation management due to changing weather patterns. It also discusses advanced technologies and strategies that can help farmers adapt, emphasizing the importance of efficient irrigation scheduling in mitigating the impact of climate variability on agriculture.
+                            book: Raza, A., et al. (2020). "Machine Learning Approaches for Crop Water Requirement Prediction: A Review." Water Resources Management, 34(7), 2345-2360.
+                            This comprehensive review highlights the role of machine learning in predicting crop water requirements, providing an overview of various algorithms and techniques applied in agricultural water management. It serves as a valuable reference for integrating machine learning in precision irrigation systems.
+                            book: Shukla, R., et al. (2019). "Application of artificial intelligence in smart irrigation systems." Journal of Environmental Management, 230, 340-350.
+                            This paper explores the application of AI and machine learning in optimizing smart irrigation systems. It emphasizes sustainable water use and demonstrates how technology-driven solutions can significantly improve irrigation efficiency.
+                            book: Singh, R. P., & Sinha, M. (2021). "A hybrid machine learning model for predicting water requirement in precision agriculture." Agricultural Systems, 190, 103074.
+                            This publication investigates the integration of hybrid machine learning models for predicting precise water requirements in agriculture. It provides insights into leveraging advanced algorithms for more effective and sustainable irrigation practices.
+                            *book: FAO. (2021). "Water for Sustainable Food and Agriculture." Food and Agriculture Organization of the United Nations.
+                            This FAO report emphasizes the critical importance of water efficiency in agricultural practices. It highlights strategies for sustainable food production and the need for adopting modern water management techniques to address global challenges in agriculture.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+{% endblock %}
+
+    

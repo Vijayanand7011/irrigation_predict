@@ -1,0 +1,117 @@
+{% extends 'base-template.html' %}
+
+{% block head %} 
+
+    <title>Subsurface Drip Irrigation</title>
+    <link rel="stylesheet" href={{url_for("static",filename="video-frame.css")}}>
+    <link rel="stylesheet" href={{url_for("static",filename="tutorial-info.css")}}>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    
+{% endblock %}
+
+
+
+{% block contentblock %} 
+
+    <div class="video-block">
+        <div class="video-grid">
+
+            <div class="video-container">
+    
+                <video id="video" class="video" width="100%" height="100%">
+                  <source src="{{ url_for('static', filename='videos/subsurface_drip_irrigation.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                
+                <div class="controls">
+                    <i id="playPause" class="control-icon fas fa-play"></i>
+                    <input id="timeline" class="timeline" type="range" value="0" max="100" step="0.1">
+                    <i id="fullscreen" class="control-icon fas fa-expand"></i>
+                </div>
+    
+              </div>
+              
+              <script src="{{ url_for('static', filename='video-frame.js') }}"></script>
+    
+        </div>
+    
+        <div class="tutorial-info">
+            
+            <h2>Subsurface Irrigation: A Sustainable Approach to Water Management</h2>
+
+            <div class="section">
+                <h3>Introduction to Subsurface Irrigation</h3>
+                <p>
+                    Subsurface irrigation is an advanced irrigation method that involves delivering water directly to the root zone of plants through a system of buried pipes or tubes. Unlike traditional surface irrigation, this system minimizes water loss due to evaporation and runoff. Subsurface irrigation is considered a more efficient and sustainable approach to irrigation, especially in areas facing water scarcity.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>How Subsurface Irrigation Works</h3>
+                <p>
+                    Subsurface irrigation systems consist of perforated pipes or tubing that are buried beneath the soil surface, typically 6 to 12 inches deep. Water is slowly released into the soil, where it moves upward through capillary action, directly nourishing plant roots. These systems can be installed in various layouts, including drip irrigation and porous pipe systems, to suit different agricultural or landscaping needs.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Advantages of Subsurface Irrigation</h3>
+                <ul class="factor-list">
+                    <li><strong>Water Conservation:</strong> By delivering water directly to the root zone, subsurface irrigation minimizes water wastage due to evaporation and runoff.</li>
+                    <li><strong>Improved Plant Growth:</strong> Plants receive a consistent and targeted supply of water, promoting healthier growth and higher yields.</li>
+                    <li><strong>Reduced Weed Growth:</strong> Since water is applied underground, there is less surface moisture, which reduces weed germination and growth.</li>
+                    <li><strong>Energy Efficiency:</strong> Subsurface irrigation systems often require less pressure and energy compared to surface irrigation systems, resulting in energy savings.</li>
+                    <li><strong>Reduced Soil Erosion:</strong> Because water is applied underground, subsurface irrigation prevents soil erosion that can occur with traditional surface irrigation methods.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Types of Subsurface Irrigation Systems</h3>
+                <p>
+                    There are several types of subsurface irrigation systems, each with its unique features and applications:
+                </p>
+                <ul class="factor-list">
+                    <li><strong>Drip Irrigation:</strong> This system uses a network of tubes and emitters to deliver water directly to the plant roots in a controlled manner.</li>
+                    <li><strong>Porous Pipe Irrigation:</strong> Porous pipes, buried beneath the soil, allow water to seep through small holes along the pipe length, providing uniform irrigation to the root zone.</li>
+                    <li><strong>Subsurface Drip Irrigation (SDI):</strong> A more advanced version of drip irrigation, SDI places the drip lines underground, providing water directly to the roots, reducing evaporation loss and increasing water efficiency.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Applications of Subsurface Irrigation</h3>
+                <p>
+                    Subsurface irrigation is ideal for a variety of applications, ranging from agriculture to landscaping. Some common uses include:
+                </p>
+                <ul class="factor-list">
+                    <li><strong>Agricultural Fields:</strong> Subsurface irrigation is widely used in crop production, especially in areas with water scarcity or where traditional irrigation is less efficient.</li>
+                    <li><strong>Lawns and Gardens:</strong> It is also used in residential and commercial landscaping to provide water directly to the roots of grass, trees, and shrubs, reducing water waste and promoting healthier growth.</li>
+                    <li><strong>Golf Courses:</strong> Many golf courses use subsurface irrigation to ensure uniform turf irrigation, which is essential for maintaining high-quality greens and fairways.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+            <h3>Challenges and Considerations</h3>
+            <p>
+                While subsurface irrigation offers many benefits, there are also challenges and considerations to keep in mind:
+            </p>
+                <ul class="factor-list">
+                    <li><strong>Initial Cost:</strong> Installation of subsurface irrigation systems can be more expensive than traditional surface irrigation methods, especially in large-scale agricultural projects.</li>
+                    <li><strong>Maintenance:</strong> The buried pipes or tubing may require regular maintenance and cleaning to avoid clogging or damage over time.</li>
+                    <li><strong>Soil Type:</strong> The effectiveness of subsurface irrigation can vary depending on soil type and permeability. Certain soils may require additional adjustments to ensure even water distribution.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Conclusion</h3>
+                <p>
+                    Subsurface irrigation is an effective and environmentally friendly solution for efficient water use. It provides numerous advantages, including water conservation, improved plant growth, and reduced weed growth. While there are challenges to consider, the long-term benefits make it a valuable irrigation method for both agricultural and landscaping applications. As water conservation becomes increasingly important, subsurface irrigation systems will play a crucial role in sustainable water management.
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+{% endblock %}
