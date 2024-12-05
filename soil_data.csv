@@ -1,0 +1,106 @@
+pincode_start,pincode_end,soil_type,drainage,infiltration,wilting_point,field_capacity
+110001,110096,Sandy Loam,Good,0.5,14,15
+121001,124533,Sandy Loam,Good,0.4,12.5,15
+125001,140308,Loam,Moderate,0.8,11,20
+140401,143607,Loam,Good,0.5,16,20
+144001,152132,Loam,Moderate,0.4,14,20
+160001,160106,Loam,Good,0.7,15,20
+171001,177220,Sandy Loam,Good,1,17,15
+180001,194401,Loam,Good,0.6,14,20
+208001,210506,Sandy Loam,Moderate,0.35,16.5,15
+210507,227708,Sandy Loam,Good,0.8,11,15
+227801,244926,Sandy Loam,Moderate,0.3,16.5,15
+246001,246763,Loam,Good,0.5,12.5,20
+247001,247778,Sandy Loam,Good,0.4,15,15
+248001,255006,Sandy Loam,Good,0.8,13,15
+261001,261606,Loam,Moderate,0.3,15,20
+262001,265411,Sandy Loam,Moderate,0.35,15,15
+271001,273415,Loam,Poor,0.25,16,20
+274001,276405,Sandy Loam,Poor,0.2,15,15
+277001,283204,Sandy Loam,Moderate,0.2,16,15
+284001,285252,Sandy Loam,Good,0.5,12.5,15
+301001,303907,Loam,Good,0.6,14,20
+304001,305928,Sandy Loam,Good,0.7,16,15
+306001,311810,Sandy Loam,Good,0.8,15,15
+312001,313907,Sandy Loam,Good,0.8,15.5,15
+314001,314804,Sandy Loam,Moderate,0.6,15,15
+321001,321641,Sandy Loam,Moderate,0.6,14,15
+322001,326530,Sandy Loam,Poor,0.6,15,15
+327001,327801,Sandy Loam,Poor,0.8,16,15
+328001,328041,Loam,Moderate,0.4,16.5,20
+331001,334804,Sandy Loam,Good,0.5,15,15
+335001,335902,Loam,Good,0.3,15.5,20
+341001,345032,Sandy Loam,Moderate,0.5,16,15
+360001,362733,Sandy Loam,Moderate,0.4,15.5,15
+363001,364765,Sandy Loam,Moderate,0.35,15.5,15
+370001,384513,Sandy Loam,Moderate,0.3,16,15
+385001,389390,Sandy Loam,Moderate,0.4,14,15
+390001,396590,Sandy Loam,Moderate,1,15.5,15
+400001,400017,Sandy Loam,Poor,0.25,12,15
+400049,400070,Sandy Loam,Poor,0.25,12,15
+400018,400030,Sandy Loam,Moderate,0.3,17,15
+400031,400032,Loam,Moderate,0.9,12.5,20
+400033,400049,Sandy Loam,Good,1,16.5,15
+400071,401205,Loam,Good,1.5,12,20
+402111,402406,Sandy Loam,Moderate,1.5,12,15
+403001,403803,Sandy Loam,Good,0.4,14,15
+410101,413416,Sandy Loam,Moderate,1,15.5,15
+413501,415120,Loam,Moderate,1.2,14,20
+415201,415208,Sandy Loam,Good,0.9,15,15
+415209,418010,Loam,Good,0.35,14,20
+421001,425524,Sandy Loam,Moderate,0.5,15,15
+431001,431905,Loam,Moderate,0.6,14,20
+440001,444915,Sandy Loam,Moderate,0.8,16.5,15
+445001,445402,Sandy Loam,Moderate,0.5,16,15
+450001,455459,Sandy Loam,Moderate,0.6,15,15
+456001,465697,Sandy Loam,Good,0.7,12.5,15
+466001,477660,Sandy Loam,Moderate,0.8,12.5,15
+480001,488442,Sandy Loam,Moderate,0.6,15,15
+490001,497768,Sandy Loam,Moderate,0.5,15.5,15
+500001,501101,Loam,Moderate,0.4,12.5,20
+501101,503321,Loam,Moderate,0.3,15,20
+504001,506391,Sandy Loam,Moderate,0.5,15,15
+507001,509433,Sandy Loam,Moderate,0.8,16,15
+515001,518675,Loam,Moderate,0.7,15.5,20
+520001,524441,Loam,Moderate,0.6,16,20
+530001,534486,Loam,Moderate,0.6,15.5,20
+560001,565227,Loam,Good,0.4,16.5,20
+570001,577602,Sandy Loam,Moderate,0.35,14,15
+580001,591812,Sandy Loam,Moderate,0.35,12,15
+600001,604601,Sandy Loam,Moderate,0.8,15,15
+605001,605502,Sandy Loam,Moderate,0.35,15,15
+605601,621863,Sandy Loam,Moderate,0.7,15,15
+622001,628803,Sandy Loam,Good,0.7,14,15
+629001,629902,Sandy Loam,Moderate,0.5,12.5,15
+630001,637508,Sandy Loam,Moderate,0.35,15,15
+638001,666213,Sandy Loam,Moderate,0.4,15.5,15
+670001,680771,Sandy Loam,Good,0.6,14,15
+682001,695618,Sandy Loam,Moderate,0.3,16,15
+700001,721670,Sandy Loam,Moderate,0.5,15,15
+722101,732215,Sandy Loam,Moderate,0.35,14,15
+733101,733216,Loam,Good,0.4,14.5,20
+734101,737128,Loam,Moderate,0.7,14,20
+741101,743710,Loam,Moderate,0.8,14,20
+751001,763008,Sandy Loam,Moderate,0.5,14.5,15
+764001,767068,Sandy Loam,Moderate,0.8,16,15
+768001,770077,Sandy Loam,Good,0.8,15,15
+781001,784527,Sandy Loam,Moderate,0.4,16,15
+785001,787060,Sandy Loam,Good,0.4,15,15
+788001,788834,Sandy Loam,Moderate,0.35,15.5,15
+790001,792123,Sandy Loam,Moderate,0.25,14.5,15
+793001,794112,Loam,Moderate,0.5,16,20
+795001,795158,Loam,Moderate,0.5,15,20
+796001,796901,Sandy Loam,Moderate,0.8,14,15
+797001,798632,Sandy Loam,Moderate,0.6,16,15
+799001,799290,Sandy Loam,Moderate,0.5,15,15
+800001,811317,Sandy Loam,Moderate,0.25,15.5,15
+812001,816129,Sandy Loam,Moderate,0.35,15,15
+821101,823005,Sandy Loam,Moderate,0.4,14.5,15
+824101,824218,Loam,Moderate,0.6,14,20
+824101,829317,Sandy Loam,Moderate,0.7,16,15
+831001,835306,Sandy Loam,Good,0.8,14,15
+841101,851139,Loam,Moderate,0.5,15,20
+851201,857255,Loam,Moderate,0.4,15.5,20
+744101,744304,Loam,Good,0.8,16,20
+201001,207504,Loam,Good,0.8,16,20
+245101,245412,Loam,Good,0.8,16,20

@@ -1,0 +1,15 @@
+crop,pincode,timestamp,upper_temp,lower_temp,humidity,rainfall,wind_speed,solar_rad,soil_type,soil_moisture,infiltration_rate,field_capacity,wilting_point,growth_stage,root_depth,crop_coeff,irrigation_efficiency,water_quality,slope,drainage_conditions,water_supplied,type
+wheat,600125,2024-12-02 08:55:18.334373,29.02,28.33,88,2.8,6.69,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,13.0,0.5,85.0,Low salinity,2.0,Moderate,22.3,PIN
+wheat,600125,2024-12-02 08:56:27.830896,29.02,28.33,88,2.8,6.69,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,13.0,0.5,85.0,Low salinity,2.0,Moderate,22.3,PIN
+wheat,600125,2024-12-02 08:57:29.500664,25.0,23.0,68.0,2.8,4.5,29.0,Loam,56.0,45.0,5.4,2.3,Seedling,13.0,0.5,85.0,Low salinity,2.0,Well Drained,22.45,PRO
+wheat,600125,2024-12-03 15:20:52.811708,27.7,26.67,90,2.8,3.09,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,22.75,PIN
+wheat,600125,2024-12-03 15:21:05.284888,27.7,26.67,90,2.8,3.09,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,22.75,PIN
+wheat,600125,2024-12-03 15:21:40.598946,27.7,26.67,90,2.8,3.09,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,22.75,PIN
+wheat,600125,2024-12-03 15:34:36.447464,27.79,26.67,90,2.8,3.09,24.2,Sandy Loam,56.0,0.8,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,22.75,PIN
+wheat,600125,2024-12-03 15:36:35.788677,27.79,26.67,90,2.8,3.09,24.2,Sandy Loam,56.0,0.8,15,15,Germination,13.0,4.0,85.0,Good,2.0,Moderate,22.85,PIN
+wheat,636118,2024-12-03 15:39:14.847470,23.76,23.76,94,2.8,1.89,24.8,Sandy Loam,56.0,0.35,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,23.65,PIN
+wheat,636118,2024-12-03 15:57:07.568155,23.76,23.76,94,2.8,1.89,24.8,Sandy Loam,56.0,0.35,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,23.65,PIN
+wheat,636118,2024-12-03 15:57:18.183546,23.76,23.76,94,2.8,1.89,24.8,Sandy Loam,56.0,0.35,15,15,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,23.65,PIN
+wheat,636118,2024-12-03 16:12:15.205672,25.0,23.0,68.0,2.8,4.5,29.0,Loam,56.0,5.0,9.0,5.0,Seedling,3.0,0.8,85.0,Low salinity,2.0,Moderate,22.8,PRO
+sugarcane,620015,2024-12-04 03:09:02.062990,34.0,28.0,45.0,20.0,4.5,29.0,Clay Loam,56.0,5.0,9.0,5.0,Grand Growth,3.0,0.8,85.0,Low salinity,2.0,Good,44.6,PRO
+cabbage,636118,2024-12-05 15:14:37.050148,24.64,24.64,88,1.0,2.91,24.700000000000003,Sandy Loam,65.0,0.35,15,15,Early Growth,15.0,0.1,85.0,Low salinity,2.0,Moderate,20.32,PIN
