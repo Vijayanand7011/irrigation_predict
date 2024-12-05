@@ -1,0 +1,356 @@
+{% extends 'base-template.html' %}
+
+
+
+{% block head %} 
+
+    <title>Input Pin </title>
+    <link rel="stylesheet" href={{url_for("static",filename="tool-tip.css")}}>
+
+    <script>
+        function filterDropdowns() {
+            var crop = document.getElementById("crop").value;
+            var growth_stage = document.getElementById("growth_stage");
+            var soil_type = document.getElementById("soil_type");
+
+            // Clear both the second and third dropdowns
+            growth_stage.innerHTML = "";
+            soil_type.innerHTML = "";
+
+            console.log("Selected crop:", crop); // Debugging line
+
+            // Arrays to hold growth stage and soil type options
+            var growth_stage_options = [];
+            var soil_type_options = [];
+
+            // Based on the crop_list selection, define growth_stage and soil_type_options arrays
+            if (crop === "banana") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Maturity", text: "Maturity" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" }
+                ];
+            } else if (crop === "cabbage") {
+                growth_stage_options = [
+                    { value: "Early Growth", text: "Early Growth" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Cupping", text: "Cupping" },
+                    { value: "Transplant", text: "Transplant" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" }
+                ];
+            } else if (crop === "cotton") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Squaring", text: "Squaring" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Boll Formation", text: "Boll Formation" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay", text: "Clay" },
+                    { value: "Silt Loam", text: "Silt Loam" }
+                ];
+            } else if (crop === "groundnut") {
+                growth_stage_options = [
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Flowering and Pod Formation", text: "Flowering" },
+                    { value: "Maturity", text: "Maturity" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Sandy Clay Loam", text: "Sandy Clay Loam" }
+                ];
+            } else if (crop === "maize") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Tasseling", text: "Tasseling" },
+                    { value: "Maturity", text: "Maturity" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy", text: "Sandy" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay", text: "Clay" }
+                ];
+            } else if (crop === "onion") {
+                growth_stage_options = [
+                    { value: "Germination", text: "Germination" },
+                    { value: "Bulbing", text: "Bulbing" },
+                    { value: "Maturity", text: "Maturity" },
+                    { value: "Harvest", text: "Harvest" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay", text: "Clay" }
+                ];
+            } else if (crop === "pepper") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Fruiting", text: "Fruiting" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" }
+                ];
+            } else if (crop === "potato") {
+                growth_stage_options = [
+                    { value: "Sprouting", text: "Sprouting" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Tuber", text: "Tuber Formation" },
+                    { value: "Tuber Bulking", text: "Tuber Bulking" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy", text: "Sandy" },
+                    { value: "Silt", text: "Silt" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" }
+                ];
+            } else if (crop === "sugarcane") {
+                growth_stage_options = [
+                    { value: "Germination", text: "Germination" },
+                    { value: "Tillering", text: "Tillering" },
+                    { value: "Grand Growth", text: "Grand Growth" },
+                    { value: "Maturity", text: "Maturity" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy", text: "Sandy" },
+                    { value: "Silt", text: "Silt" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" }
+                ];
+            } else if (crop === "tomato") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Fruit Development", text: "Fruit Development" },
+                    { value: "Maturity", text: "Maturity" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay", text: "Clay" }
+                ];
+            } else if (crop === "watermelon") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Fruit Development", text: "Fruit Development" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay Loam", text: "Clay Loam" }
+                ];
+            } else if (crop === "wheat") {
+                growth_stage_options = [
+                    { value: "Seedling", text: "Seedling" },
+                    { value: "Vegetative", text: "Vegetative" },
+                    { value: "Flowering", text: "Flowering" },
+                    { value: "Fruit Development", text: "Fruit Development" }
+                ];
+                soil_type_options = [
+                    { value: "Sandy Loam", text: "Sandy Loam" },
+                    { value: "Silt Loam", text: "Silt Loam" },
+                    { value: "Loam", text: "Loam" },
+                    { value: "Clay", text: "Clay" }
+                ];
+            }
+
+
+            // Add other crops similarly...
+
+            // Add default option to both dropdowns
+            var defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.text = "-- Select an Option --";
+            growth_stage.appendChild(defaultOption);
+            soil_type.appendChild(defaultOption.cloneNode(true));
+
+            // Add options to growth_stage dropdown
+            growth_stage_options.forEach(function(option) {
+                var newOption = document.createElement("option");
+                newOption.value = option.value;
+                newOption.text = option.text;
+                growth_stage.appendChild(newOption);
+            });
+
+            // Add options to soil_type dropdown
+            soil_type_options.forEach(function(option) {
+                var newOption = document.createElement("option");
+                newOption.value = option.value;
+                newOption.text = option.text;
+                soil_type.appendChild(newOption);
+            });
+
+            console.log("Growth Stage options:", growth_stage_options); // Debugging line
+            console.log("Soil Type options:", soil_type_options); // Debugging line
+        }
+    </script>
+
+{% endblock %}
+
+{% block contentblock %} 
+
+<!-- Left Side Form -->
+    <div class="form-container">
+
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        
+        <h2 class="header">Enter Field Status</h2>
+
+            <form method="POST" action="{{ url_for('input_pin') }}">
+
+                <div class="form-row">
+                    <label for="crop">Crop :</label>
+                    <select id="crop" class="input" name="crop" required onchange="filterDropdowns()">
+                        <option value="">--Select--</option>
+                        <option value="banana">Banana</option>
+                        <option value="cabbage">Cabbage</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="groundnut">Groundnut</option>
+                        <option value="maize">Maize</option>
+                        <option value="onion">Onion</option>
+                        <option value="pepper">Pepper</option>
+                        <option value="potato">Potato</option>
+                        <option value="sugarcane">Sugarcane</option>
+                        <option value="tomato">Tomato</option>
+                        <option value="watermelon">Watermelon</option>
+                        <option value="wheat">Wheat</option>
+                    </select>
+                    <br><br>
+                </div>
+
+                <div class="form-row">
+                    <label for="pincode">Pincode :</label>
+                    <input class="input" type="number" id="pincode" name="pincode" step="1" required>
+                    <br><br>
+                </div>
+
+                <div class="form-row">
+                    <label for="rainfall">Rainfall (mm):</label>
+                    <input class="input" id="rainfall" type="number" name="rainfall" step="0.01" required>
+                </div>
+
+
+                <div class="form-row">
+                    <label for="soil_type">Soil Type:</label>
+                    <select id="soil_type" class="input" name="soil_type" required>
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="soil_moisture">Soil Moisture Content (%):</label>
+                    <input class="input" id="soil_moisture" type="number" name="soil_moisture" step="0.01" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="growth_stage">Growth Stage:</label>
+                    <select id="growth_stage" class="input" name="growth_stage" required>
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="root_depth">Root Depth (cm):</label>
+                    <input class="input" id="root_depth" type="number" name="root_depth" step="0.01" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="crop_coeff">Crop Coefficient (Kc):</label>
+                    <input class="input" id="crop_coeff" type="number" name="crop_coeff" step="0.01" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="irrigation_efficiency">Irrigation System Efficiency (%):</label>
+                    <input class="input" id="irrigation_efficiency" type="number" name="irrigation_efficiency" step="0.01" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="water_quality">Water Quality:</label>
+                    <select class="input" id="water_quality" name="water_quality" required>
+                        <option value="">--Select--</option>
+                        <option value="Low salinity">Low salinity</option>
+                        <option value="Medium salinity">Medium salinity</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="water_ava">Water Availability:</label>
+                    <select class="input" id="water_ava" name="water_ava" required>
+                        <option value="">--Select--</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>                    
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="slope">Slope (%):</label>
+                    <input class="input" id="slope" type="number" name="slope" step="0.01" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="drainage_conditions">Drainage Conditions:</label>
+                    <select class="input" id="drainage_conditions" name="drainage_conditions" required>
+                        <option value="">--Select--</option>
+                        <option value="Good">Good</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submition">Submit</button>
+            </form>
+
+    </div>
+
+<!-- Right Side ToolTip Container -->
+
+<div class="parameter-description">
+
+    <p>
+        Using the API key from the OpenWeather website and the user's provided pincode, 
+        we successfully retrieved essential weather-related data. 
+        This includes the upper and lower temperature limits, humidity levels, wind speed, 
+        and solar radiation for the specified location. Additionally, leveraging the user's pincode, 
+        we accessed (..) the website to gather detailed soil information. 
+        This data set includes critical parameters such as soil type, infiltration rate, field capacity, 
+        drainage conditions and wilting point.
+        <br> <br>
+        By combining these data sources, 
+        we ensure the user is equipped with precise environmental and soil-related inputs necessary for decision-making, 
+        significantly reducing their effort in data collection. 
+        This streamlined approach allows us to provide accurate and location-specific data for applications like irrigation planning or agricultural modeling.
+    </p>    
+
+</div>
+
+{% endblock %}
+
+
